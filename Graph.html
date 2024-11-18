@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Algoritma &#8212; My sample book</title>
+    <title>Graph &#8212; My sample book</title>
   
   
   
@@ -60,7 +60,9 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'Algoritma';</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Graph';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -241,7 +243,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FAlgoritma.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FGraph.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -271,7 +273,7 @@
       
       
       
-      <li><a href="_sources/Algoritma.md" target="_blank"
+      <li><a href="_sources/Graph.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -347,7 +349,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Algoritma</h1>
+    <h1>Graph</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -357,17 +359,12 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definisi-algoritma">Definisi Algoritma</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#algoritma-sequential-search">Algoritma Sequential search</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#algoritma-binary-search">Algoritma Binary Search</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pseudocode">Pseudocode</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#big-o-algoritma">Big O algoritma</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hitung-big-o-dari-algoritma-sequential-search">Hitung Big O dari algoritma Sequential Search</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#referensi">Referensi</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#social-network-analysis">Social Network Analysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#social-network">Social Network</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#degree-centrality">Degree Centrality</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#closenes-centrality">Closenes Centrality</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#betweenness-centrality">Betweenness Centrality</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#normalisasi-betweenness-centrality">Normalisasi Betweenness Centrality</a></li>
 </ul>
             </nav>
         </div>
@@ -379,44 +376,75 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="algoritma">
-<h1>Algoritma<a class="headerlink" href="#algoritma" title="Link to this heading">#</a></h1>
-<section id="definisi-algoritma">
-<h2>Definisi Algoritma<a class="headerlink" href="#definisi-algoritma" title="Link to this heading">#</a></h2>
-<p>Algoritma adalah metode atau langkah yang direncanakan secara tersusun dan berurutan untuk menyelesaikan atau memecahkan permasalahan dengan sebuah intruksi atau kegiatan.Secara singkat algoritma adalah proses tahapan-tahapan untuk mencapai tujuan tertentu.</p>
-<section id="algoritma-sequential-search">
-<h3>Algoritma Sequential search<a class="headerlink" href="#algoritma-sequential-search" title="Link to this heading">#</a></h3>
-<p>Sequential search adalah teknik pencarian data yang dilakukan dengan cara membandingkan setiap elemen data satu per satu, mulai dari elemen pertama hingga elemen yang dicari ditemukan. Proses ini terus berlanjut hingga data ditemukan atau seluruh elemen telah diperiksa.</p>
-<p>Algoritma ini termasuk salah satu algoritma pencarian yang paling sederhana dan sering digunakan dalam situasi di mana data tidak memiliki struktur tertentu.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="graph">
+<h1>Graph<a class="headerlink" href="#graph" title="Link to this heading">#</a></h1>
+<p>Graph merupakan kumpulan note yang saling berhubungan.</p>
+<section id="social-network-analysis">
+<h2>Social Network Analysis<a class="headerlink" href="#social-network-analysis" title="Link to this heading">#</a></h2>
+<p>merupakan bidang kajian yang mengekplorasitentang hubungan manusia dengan menggunakan teori graf. Implementasi Social Network Analysis dapat menjelaskan relasi atau hubungan antar aktor melalui visualisasi berbentuk graf. Relasi dalam analisis jaringan sosial dapat diproses dalam bentuk perhitungan yang disebut centrality dalam sebuah jaringan sosial sesuai dengan posisi masing-masing aktor di dalam struktur jaringan tersebut</p>
 </section>
-<section id="algoritma-binary-search">
-<h3>Algoritma Binary Search<a class="headerlink" href="#algoritma-binary-search" title="Link to this heading">#</a></h3>
-<p>Pencarian biner adalah algoritma pencarian yang digunakan untuk menemukan posisi nilai target dalam array yang diurutkan . Algoritma ini bekerja dengan membagi interval pencarian menjadi dua secara berulang hingga nilai target ditemukan atau intervalnya kosong. Interval pencarian dibagian dua dengan membandingkan elemen target dengan nilai tengah ruang pencarian.</p>
-</section>
-</section>
-<section id="pseudocode">
-<h2>Pseudocode<a class="headerlink" href="#pseudocode" title="Link to this heading">#</a></h2>
-<p>Pseudocode adalah cara penulisan kode dan algoritma menggunakan bahasa umum yang digunakan sehari-hari sehingga lebih mudah dipahami. Karena itu pseudocode juga disebut sebagai false code atau representation code.</p>
-<p>Biasanya bahasa yang digunakan dalam pseudocode adalah bahasa Inggris sederhana, tapi bisa juga dengan bahasa Indonesia atau bahasa lain. Tujuannya agar siapapun yang tidak memiliki latar belakang programming bisa memahami sebuah program dan menjalankannya dengan benar.</p>
-</section>
-<section id="big-o-algoritma">
-<h2>Big O algoritma<a class="headerlink" href="#big-o-algoritma" title="Link to this heading">#</a></h2>
-<p>Notasi Big-O adalah cara untuk mengekspresikan kompleksitas waktu (atau ruang) suatu algoritma. Notasi ini memberikan perkiraan kasar tentang berapa lama waktu yang dibutuhkan suatu algoritma untuk berjalan (atau berapa banyak memori yang digunakannya), berdasarkan ukuran input. Misalnya, suatu algoritma dengan kompleksitas waktuO(n)berarti waktu berjalan meningkat secara linear seiring dengan ukuran input.</p>
-</section>
-<section id="hitung-big-o-dari-algoritma-sequential-search">
-<h2>Hitung Big O dari algoritma Sequential Search<a class="headerlink" href="#hitung-big-o-dari-algoritma-sequential-search" title="Link to this heading">#</a></h2>
+<section id="social-network">
+<h2>Social Network<a class="headerlink" href="#social-network" title="Link to this heading">#</a></h2>
+<p><img alt="image" src="https://hackmd.io/_uploads/HJYO_H_fJx.png" /></p>
+<p><img alt="image" src="https://hackmd.io/_uploads/HyHK_ruGyg.png" /></p>
+<p>Terdapat node yang mewakili  orang atau individu atau aktor. Relasi antar objek dapat dinyatakan dengan link atau edges yang terjadi antara aktor tersebut Social Network terdiri dari banyak aktor yang mempunyai relasi satu sama lain hingga membentuk petra jaringan sosial yang dinyatakan dengan Graph</p>
 <ul class="simple">
-<li><p>Waktu kompleksitas (time complexity)</p></li>
-<li><p>Ruang Komleksitas (space komplexity)</p></li>
+<li><p>Tidak semua node dalam jaringan adalah penting  (aktor)</p></li>
+<li><p>Mencari node yang paling penting dalam suatu jaringan</p></li>
+<li><p>Centrality adalah penentuan aktor menggunakan ukuran pada Social Network Centrality dalam teori graf dan social network .Dibagi menjadi empat jenis,
+-degree centrality,
+-betweeness centrality,
+-closeness centrality
+-eigenvector centrality</p></li>
 </ul>
-<section id="referensi">
-<h3>Referensi<a class="headerlink" href="#referensi" title="Link to this heading">#</a></h3>
-<p><a class="reference external" href="https://bdkm.unida.ac.id/artikel/pengertian-algoritma.html">https://bdkm.unida.ac.id/artikel/pengertian-algoritma.html</a>(LMS Unida Cool - Algoritma dan Pemrograman, Penulis materi : Ma’shum Abdul Jabbar, S.Kom., M.T.I.)</p>
-<p><a class="reference external" href="https://fikti.umsu.ac.id/algoritma-sequential-search-pengertian-fungsi-dan-cara-kerjanya/">https://fikti.umsu.ac.id/algoritma-sequential-search-pengertian-fungsi-dan-cara-kerjanya/</a></p>
-<p><a class="reference external" href="https://www.geeksforgeeks.org/binary-search/">https://www.geeksforgeeks.org/binary-search/</a></p>
-<p><a class="reference external" href="https://revou.co/kosakata/pseudocode">https://revou.co/kosakata/pseudocode</a></p>
-<p><a class="reference external" href="https://www.designgurus.io/blog/big-o-algorithm-complexity">https://www.designgurus.io/blog/big-o-algorithm-complexity</a></p>
 </section>
+<section id="degree-centrality">
+<h2>Degree Centrality<a class="headerlink" href="#degree-centrality" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Degree Centrality adalah jumlah edge yang terkoneksi pada satu node yang mewakili interaksi.</p></li>
+<li><p>Pentingnya node ditentukan oleh jumlah node yang berdekatan dengan node tersebut
+-Lebih besar derajatnya (degree), maka lebih penting node tersebut dalam suatu jaringan
+-Hanya sebagian kecil node yang memiliki derajat tinggi dalam jaringan</p></li>
+<li><p>Degree Centrality: <span class="math notranslate nohighlight">\(C_D(v_i) = d_i = \sum A_{ij}\)</span></p></li>
+<li><p>Normalisasi Degree Centrality: <span class="math notranslate nohighlight">\(C_D(v_i) = \frac{d_i}{(n - 1)}\)</span></p></li>
+</ul>
+<p><img alt="image" src="https://hackmd.io/_uploads/r1UwOB_MJg.png" /></p>
+<p>Untuk  node 1, degree centrality adalah 3;
+Normalisasi degree centrality adalah
+<span class="math notranslate nohighlight">\(\frac3{(9-1)}=\frac38\)</span>.</p>
+</section>
+<section id="closenes-centrality">
+<h2>Closenes Centrality<a class="headerlink" href="#closenes-centrality" title="Link to this heading">#</a></h2>
+<p>Closenes Centrality adalah nilai kedekatan antara satu node dengan node lain dalam jaringan dengan menghitung rata-rata dari jarak relasi node-node tersebut. Skor Closeness Centrality mewakili kecepatan dalam penyebaran informasi.</p>
+<ul class="simple">
+<li><p>Average Distance: <span class="math notranslate nohighlight">\(D_{avg}(v_i) = \frac{1}{n-1} \sum_{j \neq i}^{n} g(v_i, v_j)\)</span></p></li>
+<li><p>Closeness Centrality: <span class="math notranslate nohighlight">\(C_c(v_i) = \left[ \frac{1}{n-1} \sum_{j \neq i}^{n} g(v_i, v_j) \right]^{-1} = \frac{n-1}{\sum_{j \neq i} g(v_i, v_j)}\)</span></p></li>
+</ul>
+</section>
+<section id="betweenness-centrality">
+<h2>Betweenness Centrality<a class="headerlink" href="#betweenness-centrality" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Skor Betweenness Centrality mewakili beberapa besar informasi yang tersebatr dari suatu aktor . Semakin besar skor, artinya aktor tersebut semakin berperan dalam penyebaran informasi.</p></li>
+<li><p>Semakin banya lintasan yang harus melewati persimpangan itu (misal tidak ada jalan alternatif), maka semakin penting arti persimpangan tersebut. Hal ini menandakan seberapa besar suatu node diperlukan sebagai penghubung dalam penyebaran informasi di dalam jaringan.</p></li>
+<li><p>Ukuran ini juga bisa digunakan untuk mengidentifikasi Boundary spanners, yaitu orang atau node yang berperan sebagai penghubung (jembatan) antara dua komunitas.</p></li>
+<li><p>Menghitung jumlah lintasan terpendek yang melewati suatu node</p></li>
+<li><p>Node dengan  betweenness  tinggi  adalah  penting dalam komunikasi dan penyebaran informasi</p></li>
+<li><p>Betweenness Centrality</p></li>
+</ul>
+<p><span class="math notranslate nohighlight">\(C_B(u_i) = \sum_{\substack{u_j \neq u_i \\ u_j \in V, s &lt; t}} \frac{\sigma_{st}(u_i)}{\sigma_{st}}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\sigma_{st}\)</span> Jumlah lintasan terpendek antara  s dan t</p>
+<p><span class="math notranslate nohighlight">\(\sigma_{st}(v_i)\)</span> Jumlah lintasan terpendek antara s dan t yang melewati <span class="math notranslate nohighlight">\(v_i\)</span></p>
+<p><img alt="image" src="https://hackmd.io/_uploads/B1OS6H_fye.png" />
+<span class="math notranslate nohighlight">\(C_B\)</span> (4) = 15</p>
+<p><img alt="image" src="https://hackmd.io/_uploads/HyGY6r_zJl.png" /></p>
+<p>betweenness centrality untuk node 5?
+<span class="math notranslate nohighlight">\(\sigma_{st}\)</span> = Jumlah lintasan terpendek antara  s dan t</p>
+<p><span class="math notranslate nohighlight">\(\sigma_{st}(v_i)\)</span> Jumlah lintasan terpendek antara s dan t yang melewati <span class="math notranslate nohighlight">\(v_i\)</span></p>
+<p><span class="math notranslate nohighlight">\(C_B(u_i) = \sum_{\substack{u_j \neq u_i \\ u_j \in V, s &lt; t}} \frac{\sigma_{st}(u_i)}{\sigma_{st}}\)</span></p>
+</section>
+<section id="normalisasi-betweenness-centrality">
+<h2>Normalisasi Betweenness Centrality<a class="headerlink" href="#normalisasi-betweenness-centrality" title="Link to this heading">#</a></h2>
+<p><span class="math notranslate nohighlight">\(C'_B(i) = \frac{C_B(i)}{(n-1)(n-2)/2}\)</span></p>
 </section>
 </section>
 
@@ -467,17 +495,12 @@
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definisi-algoritma">Definisi Algoritma</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#algoritma-sequential-search">Algoritma Sequential search</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#algoritma-binary-search">Algoritma Binary Search</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pseudocode">Pseudocode</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#big-o-algoritma">Big O algoritma</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hitung-big-o-dari-algoritma-sequential-search">Hitung Big O dari algoritma Sequential Search</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#referensi">Referensi</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#social-network-analysis">Social Network Analysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#social-network">Social Network</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#degree-centrality">Degree Centrality</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#closenes-centrality">Closenes Centrality</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#betweenness-centrality">Betweenness Centrality</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#normalisasi-betweenness-centrality">Normalisasi Betweenness Centrality</a></li>
 </ul>
   </nav></div>
 
