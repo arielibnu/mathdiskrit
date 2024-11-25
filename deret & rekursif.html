@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -159,7 +159,7 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="intro.html">
-                    Welcome to your Jupyter Book
+                    Welcome to My Book
                 </a>
             </li>
         </ul>
@@ -357,16 +357,12 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deretan-sequence">Deretan (Sequence)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definisi">Definisi</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penjumlahan-deretan">Penjumlahan Deretan</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deret-geometri">Deret Geometri</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deret-aritmetika">Deret Aritmetika</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sumasi-ganda">Sumasi Ganda</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deretan-sequence">Deretan (sequence)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penjumlahan-deretan">Penjumlahan Deretan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sumasi-ganda">Sumasi ganda</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rekursi">Rekursi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fungsi-rekursif">Fungsi Rekursif</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#struktur-rekursif">Struktur Rekursif</a></li>
 </ul>
             </nav>
         </div>
@@ -381,64 +377,364 @@
   <section class="tex2jax_ignore mathjax_ignore" id="deretan-dan-rekursi">
 <h1>Deretan dan Rekursi<a class="headerlink" href="#deretan-dan-rekursi" title="Link to this heading">#</a></h1>
 <section id="deretan-sequence">
-<h2>Deretan (Sequence)<a class="headerlink" href="#deretan-sequence" title="Link to this heading">#</a></h2>
-<p>Deretan adalah suatu urutan atau susunan elemen atau objek yang disusun secara teratur berdasarkan suatu aturan tertentu. Elemen dalam deretan biasanya berupa angka, huruf, simbol, atau objek lainnya.</p>
-<section id="definisi">
-<h3>Definisi<a class="headerlink" href="#definisi" title="Link to this heading">#</a></h3>
-<p>Sebuah deretan adalah fungsi dari subset suatu himpunan bilangan bulat (biasanya ( \mathbb{N} ) atau ( \mathbb{P} )) ke sebuah himpunan ( S ).</p>
-<div class="math notranslate nohighlight">
-\[
-\mathbb{N} = \{1, 2, 3, 4, \dots \}
-\]</div>
-<p>Contoh:
-$<span class="math notranslate nohighlight">\(
-S = \{2, 4, 6, 8, \dots \}, \quad \{1/3, 1/5, 1/7, \dots \}, \quad \text{dsb.}
-\)</span>$</p>
-<p>Notasi deretan:
-$<span class="math notranslate nohighlight">\(
-\{a_n\}
-\)</span>$</p>
-<p>Deretan umumnya dinyatakan dalam formula:
-$<span class="math notranslate nohighlight">\(
-a_n = 2n, \quad a_n = \frac{1}{n}, \quad a_n = 7 - 3n
-\)</span>$</p>
-<p>Contoh deretan:</p>
+<h2>Deretan (sequence)<a class="headerlink" href="#deretan-sequence" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p>Deretan bilangan ganjil: (1, 3, 5, 7, \dots)</p></li>
-<li><p>Deretan bilangan genap: (2, 4, 6, 8, \dots)</p></li>
-<li><p>Deretan aritmetika: (3, 6, 9, 12, \dots)</p></li>
+<li><p>Deretan adalah suatu urutan atau susunan elemen atau objek yang disusun secara teratur berdasarkan suatu aturan tertentu. Elemen dalam deretan biasanya berupa angka, huruf, simbol, atau objek lainnya, dan urutannya dapat didasarkan pada pola, nilai, atau hubungan tertentu</p></li>
+<li><p>Definisi: Sebuah deretan adalah fungsi dari subset suatu himpunan bilangan bulat (biasanya N atau P) ke sebuah himpunan S.</p></li>
 </ul>
-</section>
-</section>
+<p>N = {1, 2, 3, 4, … }
+S misalnya {2, 4, 6, 8, …},   {1/3, 1/5, 1/7, …},  dsb</p>
+<p>Notasi Deretan: {<span class="math notranslate nohighlight">\(a_n\)</span>}</p>
+<ul class="simple">
+<li><p>Deretan umumnya dinyatakan dalam suatu formula, misalnya:
+<span class="math notranslate nohighlight">\(a_n = 2n\)</span></p></li>
+</ul>
+<p><span class="math notranslate nohighlight">\(a_n = \frac{1}{n}\)</span></p>
+<p><span class="math notranslate nohighlight">\(a_n = 7 - 3n\)</span></p>
+<p>Dalam konteks matematika, deretan sering merujuk pada barisan bilangan, yaitu kumpulan bilangan yang disusun dalam suatu pola tertentu.
+Misalnya:</p>
+<ol class="arabic simple">
+<li><p>Deretan bilangan ganjil: 1,3,5,7,…</p></li>
+<li><p>Deretan bilangan genap: 2,4,6,8,…</p></li>
+<li><p>Deretan bilangan yang membentuk deret aritmetika: 3,6,9,12….</p></li>
+</ol>
 <hr class="docutils" />
+<p>-Contoh-contoh deretan dan formulanya:</p>
+<ul class="simple">
+<li><p>Deret Aritmetika
+Deret dengan pola kenaikan atau penurunan tetap.
+Contoh: 2,5,8,11,14,…
+Rumus suku ke-n: <span class="math notranslate nohighlight">\(U_n = a + (n - 1) \cdot b\)</span>
+Di mana:
+-<span class="math notranslate nohighlight">\(a\)</span>: suku pertama
+-<span class="math notranslate nohighlight">\(b\)</span>: beda (selisih antar suku)
+-<span class="math notranslate nohighlight">\(n\)</span>: nomor suku yang dicari</p></li>
+<li><p>Deret Geometri
+Deret dengan pola kelipatan tetap.
+Contoh: 3,6,12,24,48,…
+Rumus suku ke-n: <span class="math notranslate nohighlight">\(U_n = a \cdot r^{(n-1)}\)</span>
+Di mana:
+-<span class="math notranslate nohighlight">\(a\)</span>: suku pertama
+-<span class="math notranslate nohighlight">\(r\)</span>: rasio (perbandingan antar suku,
+-<span class="math notranslate nohighlight">\(n\)</span>: nomor suku yang dicari</p></li>
+<li><p>Deret Bilangan Kuadrat
+Deret dengan pola nilai berupa kuadrat bilangan bulat.
+Contoh: 1,4,9,16,25,…
+Rumus suku ke-n: <span class="math notranslate nohighlight">\(𝑈_𝑛=𝑛^2\)</span></p></li>
+<li><p>Deret Bilangan Kubik
+Deret dengan pola nilai berupa kubik bilangan bulat.
+Contoh: 1,8,27,64,125,…
+Rumus suku ke-n: <span class="math notranslate nohighlight">\(𝑈_𝑛=𝑛^3\)</span></p></li>
+<li><p>Deret Fibonanci
+Deret dengan pola di mana setiap suku merupakan jumlah dua suku sebelumnya.
+Contoh: 0,1,1,2,3,5,8,…
+Rumus suku ke-n(rekursif): <span class="math notranslate nohighlight">\(𝐹_𝑛=𝐹_(𝑛−1)+𝐹_(𝑛−2),𝐹_0=0,𝐹_1=1\)</span></p></li>
+</ul>
+<hr class="docutils" />
+<ul class="simple">
+<li><p>String
+String adalah deretan berhingga karakter berbentuk
+<span class="math notranslate nohighlight">\(a_1a_2a_3a_4…a_n\)</span></p></li>
+</ul>
+<p>Panjang string S adalah jumlah karakter di dalam string tersebut</p>
+<p>Contoh:  informatika adalah string dengan panjang 11 karakter 10100101 adalah string biner dengan panjang 8 bit</p>
+<p>String kosong dilambangkan dengan <span class="math notranslate nohighlight">\(\lambda\)</span>, panjangnya = 0</p>
+</section>
 <section id="penjumlahan-deretan">
 <h2>Penjumlahan Deretan<a class="headerlink" href="#penjumlahan-deretan" title="Link to this heading">#</a></h2>
-<section id="deret-geometri">
-<h3>Deret Geometri<a class="headerlink" href="#deret-geometri" title="Link to this heading">#</a></h3>
-<div class="math notranslate nohighlight">
-\[
-S = \sum_{i=1}^{n} ar^{i-1} = a \frac{1-r^n}{1-r}, \quad r \neq 1
-\]</div>
-</section>
-<section id="deret-aritmetika">
-<h3>Deret Aritmetika<a class="headerlink" href="#deret-aritmetika" title="Link to this heading">#</a></h3>
-<div class="math notranslate nohighlight">
-\[
-S = \sum_{i=1}^{n} a + (i-1)d = \frac{n}{2} \big(2a + (n-1)d\big)
-\]</div>
+<p>Jumlah deretan
+<span class="math notranslate nohighlight">\(a_m, a_{m+1}, a_{m+2}, …, a_n\)</span>
+adalah
+<span class="math notranslate nohighlight">\(a_m + a_{m+1} + a_{m+2} + … + a_n\)</span>
+atau dalam notasi sumasi:
+<span class="math notranslate nohighlight">\(\sum_{k=m}^{n} a_k\)</span>
+<span class="math notranslate nohighlight">\(k\)</span> adalah indeks summasi,
+<span class="math notranslate nohighlight">\(m\)</span> adalah batas bawah indeks,
+<span class="math notranslate nohighlight">\(n\)</span> adalah batas atas indeks</p>
+<p>Contoh 2: Berapa nilai <span class="math notranslate nohighlight">\(\sum_{k=1}^{5} k^2\)</span>?
+Jawaban:
+<span class="math notranslate nohighlight">\(\sum_{k=1}^{5} k^2 = 1^2 + 2^2 + 3^2 + 4^2 + 5^2 = 1 + 4 + 9 + 16 + 25 = 55\)</span></p>
+<hr class="docutils" />
+<p>Contoh 3:Batas bawah sumasi kadangkala perlu digeser agar dapat dijumlahkan dengan sumasi lain yang memiliki batas bawah berbeda.
+Pada Contoh 2 di atas, batas bawah digeser dari 1 menjadi 0, akibatnya:
+<span class="math notranslate nohighlight">\(\sum_{k=1}^{5} k^2 = \sum_{k=0}^{4} (k+1)^2\)</span></p>
+<p>Contoh 4:Sumasi dapat dipecah dengan membagi dua indeksnya, misalnya:
+<span class="math notranslate nohighlight">\(\sum_{k=1}^{100} k^2\)</span> = <span class="math notranslate nohighlight">\(\sum_{k=1}^{49} k^2\)</span> +<span class="math notranslate nohighlight">\( \)</span>\sum_{k=50}^{100} k^2$</p>
+<hr class="docutils" />
+<ul class="simple">
+<li><p>TUGAS PEMBUKTIAN Dari 3 rumus dibawah Beberapa sumasi sudah ditemukan rumus penjumlahannya sebagai berikut:</p></li>
+</ul>
+<p><img alt="1000122066" src="https://hackmd.io/_uploads/SJcLauxQyg.jpg" /></p>
+<p>Jawab:</p>
+<ol class="arabic simple">
+<li><p>Rumus 1 (Deret Geometri): $<span class="math notranslate nohighlight">\( \sum_{k=0}^{n} ar^k = \frac{ar^{n+1} - a}{r - 1}, \quad r \neq 1 \)</span>$</p></li>
+</ol>
+<p>Pembuktian:</p>
+<p>-Misalkan <span class="math notranslate nohighlight">\(S = \sum_{k=0}^{n} ar^k = a + ar + ar^2 + \dots + ar^n\)</span>.</p>
+<p>-Kalikan kedua sisi dengan <span class="math notranslate nohighlight">\(r\)</span>: $<span class="math notranslate nohighlight">\( rS = ar + ar^2 + ar^3 + \dots + ar^{n+1} \)</span>$</p>
+<p>-Kurangkan persamaan pertama dari yang kedua: $<span class="math notranslate nohighlight">\( S - rS = a - ar^{n+1} \)</span><span class="math notranslate nohighlight">\( \)</span><span class="math notranslate nohighlight">\( S(1 - r) =_ a(1 - r^{n+1}) \)</span>$</p>
+<hr class="docutils" />
+<ol class="arabic simple" start="2">
+<li><p>Rumus 2: $<span class="math notranslate nohighlight">\( \sum_{k=1}^{n} k = \frac{n(n+1)}{2} \)</span>$</p></li>
+</ol>
+<p>Pembuktian:</p>
+<p>-Misalkan <span class="math notranslate nohighlight">\(S = \sum_{k=1}^{n} k = 1 + 2 + 3 + \dots + n\)</span>.</p>
+<p>-Tuliskan <span class="math notranslate nohighlight">\(S\)</span> secara terbalik: $<span class="math notranslate nohighlight">\( S = n + (n-1) + (n-2) + \dots + 1 \)</span>$</p>
+<p>-Jumlahkan kedua barisan: $<span class="math notranslate nohighlight">\( 2S = (1 + n) + (2 + (n-1)) + (3 + (n-2)) + \dots + (n + 1) \)</span><span class="math notranslate nohighlight">\( \)</span><span class="math notranslate nohighlight">\( 2S = n(n+1) \)</span>$</p>
+<p>-Bagi kedua sisi dengan <span class="math notranslate nohighlight">\(2\)</span>: $<span class="math notranslate nohighlight">\( S = \frac{n(n+1)}{2} \)</span>$</p>
+<hr class="docutils" />
+<ol class="arabic simple" start="3">
+<li><p>Rumus 3: $<span class="math notranslate nohighlight">\( \sum_{k=1}^{n} k^2 = \frac{n(n+1)(2n+1)}{6} \)</span>$</p></li>
+</ol>
+<p>Pembuktian:</p>
+<p>-Gunakan induksi matematika:</p>
+<p>Basis: Untuk <span class="math notranslate nohighlight">\(n = 1\)</span>,
+$<span class="math notranslate nohighlight">\( \sum_{k=1}^{1} k^2 = 1^2 = 1 \)</span><span class="math notranslate nohighlight">\( Rumus memberikan:
+\)</span><span class="math notranslate nohighlight">\( \frac{1(1+1)(2\cdot1+1)}{6} = 1 \)</span><span class="math notranslate nohighlight">\( Jadi, benar untuk \)</span>n = 1$.</p>
+<p>Induksi: Misalkan benar untuk <span class="math notranslate nohighlight">\(n\)</span>, yaitu: $<span class="math notranslate nohighlight">\( \sum_{k=1}^{n} k^2 = \frac{n(n+1)(2n+1)}{6} \)</span><span class="math notranslate nohighlight">\( Buktikan untuk \)</span>n+1<span class="math notranslate nohighlight">\(:
+\)</span><span class="math notranslate nohighlight">\( \sum_{k=1}^{n+1} k^2 = \sum_{k=1}^{n} k^2 + (n+1)^2 \)</span><span class="math notranslate nohighlight">\( Substitusi rumus induksi: \)</span><span class="math notranslate nohighlight">\( \frac{n(n+1)(2n+1)}{6} + (n+1)^2 \)</span><span class="math notranslate nohighlight">\( Faktorkan \)</span>(n+1)<span class="math notranslate nohighlight">\(: \)</span><span class="math notranslate nohighlight">\( \frac{(n+1)\left[n(2n+1) + 6(n+1)\right]}{6} \)</span><span class="math notranslate nohighlight">\( Sederhanakan: \)</span><span class="math notranslate nohighlight">\( \frac{(n+1)(n+2)(2n+3)}{6} \)</span><span class="math notranslate nohighlight">\( Jadi terbukti benar untuk \)</span>n+1$.</p>
+<hr class="docutils" />
+<ol class="arabic simple" start="4">
+<li><p>Rumus 4: $<span class="math notranslate nohighlight">\( \sum_{k=1}^{n} k^3 = \left(\frac{n(n+1)}{2}\right)^2 \)</span>$</p></li>
+</ol>
+<p>Pembuktian:</p>
+<p>-Misalkan <span class="math notranslate nohighlight">\(S = \sum_{k=1}^{n} k^3 = 1^3 + 2^3 + 3^3 + \dots + n^3\)</span>.</p>
+<p>-Gunakan rumus jumlah bilangan bulat: $<span class="math notranslate nohighlight">\( \sum_{k=1}^{n} k = \frac{n(n+1)}{2} \)</span>$</p>
+<p>-Kuadratkan kedua sisi: $<span class="math notranslate nohighlight">\( \left(\sum_{k=1}^{n} k\right)^2 = \left(\frac{n(n+1)}{2}\right)^2 \)</span>$</p>
+<p>-Berdasarkan hasil, terbukti bahwa: $<span class="math notranslate nohighlight">\( \sum_{k=1}^{n} k^3 = \left(\frac{n(n+1)}{2}\right)^2 \)</span>$</p>
+<hr class="docutils" />
+<ol class="arabic simple" start="5">
+<li><p>Rumus 5 (Deret Geometri dengan <span class="math notranslate nohighlight">\(|x| &lt; 1\)</span>): $<span class="math notranslate nohighlight">\( \sum_{k=0}^{\infty} x^k = \frac{1}{1-x} \)</span>$</p></li>
+</ol>
+<p>Pembuktian:</p>
+<p>-Misalkan <span class="math notranslate nohighlight">\(S = \sum_{k=0}^{\infty} x^k = 1 + x + x^2 + x^3 + \dots\)</span></p>
+<p>-Kalikan <span class="math notranslate nohighlight">\(S\)</span> dengan <span class="math notranslate nohighlight">\(x\)</span>: $<span class="math notranslate nohighlight">\( xS = x + x^2 + x^3 + \dots \)</span>$</p>
+<p>-Kurangkan kedua persamaan: $<span class="math notranslate nohighlight">\( S - xS = 1 \)</span><span class="math notranslate nohighlight">\( \)</span><span class="math notranslate nohighlight">\( S(1 - x) = 1 \)</span>$</p>
+<p>-Bagi kedua sisi dengan <span class="math notranslate nohighlight">\((1 - x)\)</span> (dengan <span class="math notranslate nohighlight">\(|x| &lt; 1\)</span>): $<span class="math notranslate nohighlight">\( S = \frac{1}{1-x} \)</span>$</p>
+<hr class="docutils" />
+<ol class="arabic simple" start="6">
+<li><p>Rumus 6 (Turunan Deret Geometri dengan <span class="math notranslate nohighlight">\(|x| &lt; 1\)</span>): $<span class="math notranslate nohighlight">\( \sum_{k=1}^{\infty} kx^{k-1} = \frac{1}{(1-x)^2} \)</span>$</p></li>
+</ol>
+<p>Pembuktian:</p>
+<p>-Mulai dari deret geometri: $<span class="math notranslate nohighlight">\( \sum_{k=0}^{\infty} x^k = \frac{1}{1-x}, \quad |x| &lt; 1 \)</span>$</p>
+<p>-Turunkan kedua sisi terhadap <span class="math notranslate nohighlight">\(x\)</span>: $<span class="math notranslate nohighlight">\( \frac{d}{dx} \left(\sum_{k=0}^{\infty} x^k\right) = \frac{d}{dx} \left(\frac{1}{1-x}\right) \)</span>$</p>
+<p>-Pada sisi kiri: $<span class="math notranslate nohighlight">\( \frac{d}{dx} \left(\sum_{k=0}^{\infty} x^k\right) = \sum_{k=1}^{\infty} kx^{k-1} \)</span>$</p>
+<p>-Pada sisi kanan: $<span class="math notranslate nohighlight">\( \frac{d}{dx} \left(\frac{1}{1-x}\right) = \frac{1}{(1-x)^2} \)</span>$</p>
+<p>-Jadi: $<span class="math notranslate nohighlight">\( \sum_{k=1}^{\infty} kx^{k-1} = \frac{1}{(1-x)^2} \)</span>$</p>
+<hr class="docutils" />
+<p>Contoh 5: Hitung nilai <span class="math notranslate nohighlight">\(\sum_{k=50}^{100} k^2\)</span></p>
+<p>Jawaban
+<span class="math notranslate nohighlight">\(\sum_{k=1}^{100} k^2 = \sum_{k=1}^{49} k^2 + \sum_{k=50}^{100} k^2\)</span></p>
+<p><span class="math notranslate nohighlight">\(\sum_{k=50}^{100} k^2 = \sum_{k=1}^{100} k^2 - \sum_{k=1}^{49} k^2\)</span></p>
+<p>Gunakan rumus:
+<span class="math notranslate nohighlight">\(\sum_{k=1}^{n} k^2 = \frac{n(n+1)(2n+1)}{6}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\sum_{k=50}^{100} k^2 = \frac{100(101)(201)}{6} - \frac{49(50)(99)}{6}\)</span></p>
+<p><span class="math notranslate nohighlight">\(= 338,350 - 40,425 = 297,925\)</span></p>
 </section>
 <section id="sumasi-ganda">
-<h3>Sumasi Ganda<a class="headerlink" href="#sumasi-ganda" title="Link to this heading">#</a></h3>
-<p>Contoh penggunaan: Hitung jumlah operasi “+” dalam algoritma berikut:</p>
-<div class="highlight-plaintext notranslate"><div class="highlight"><pre><span></span>x = 0
+<h2>Sumasi ganda<a class="headerlink" href="#sumasi-ganda" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Di dalam algoritma, kita perlu menghitung berapa kali suatu operasi tertentu dilakukan di dalam sebuah kalang bersarang (nested loop). Penjumlahan semua operasi di dalam kalang bersarang dinyatakan dalam bentuk sumasi ganda.</p></li>
+</ul>
+<p>Contoh: <span class="math notranslate nohighlight">\(\sum_{i=1}^{4} \sum_{j=1}^{3} ij\)</span></p>
+<p>Untuk menghitung sumasi ganda, mula-mula ekspansi sumasi terdalam, lalu dilanjutkan dengan sumasi terluar:
+<span class="math notranslate nohighlight">\(\sum_{i=1}^{4} \sum_{j=1}^{3} ij =\sum_{i=1}^{4} \left( i + 2i + 3i\right) = \sum_{i=1}^{4} 6i = 6 +12 + 18 + 24 = 60\)</span></p>
+<p>Contoh penggunaan: Berapa kali operasi + dilakukan di dalam algoritma di bawah ini?
+x = 0
 for j = 1 to 10 do
-    for k = 1 to j do
-        x = x + 2
-    end for
+for k = 1 to j do
+x = x + 2
 end for
-</pre></div>
-</div>
+end for</p>
+<p>Penyelesaian:
+Operasi + terdapat di dalam pernyataan x = x + 2 Operasi ini dilakukan satu kali pada setiap pengulangan.</p>
+<p>Jumlah seluruh operasi + adalah:</p>
+<p><span class="math notranslate nohighlight">\(t = \sum_{j=1}^{10} \sum_{k=1}^{j} 1\)</span></p>
+<p><span class="math notranslate nohighlight">\(= \sum_{j=1}^{10} (1 + 1 + \dots +1\)</span> sebanyak  j  kali)</p>
+<p><span class="math notranslate nohighlight">\(= \sum_{j=1}^{10} j\)</span></p>
+<p><span class="math notranslate nohighlight">\(= \frac{10(10+1)}{2} = 55\)</span></p>
+<hr class="docutils" />
+<p>Latihan:</p>
+<ol class="arabic simple">
+<li><p>Tentukan nilai <span class="math notranslate nohighlight">\(\sum_{k=1}^8 2^k + \sum_{k=2}^8 (-3)^k\)</span></p></li>
+<li><p>Tentukan nilai <span class="math notranslate nohighlight">\(\sum_{i=0}^2 \sum_{j=0}^3 (2i + 3j)\)</span></p></li>
+<li><p>Tentukan nilai <span class="math notranslate nohighlight">\(\sum_{i=0}^3 \sum_{j=0}^2 i\)</span></p></li>
+</ol>
+<p>Jawab:</p>
+<ol class="arabic simple">
+<li><p>Tentukan nilai <span class="math notranslate nohighlight">\(\sum_{k=1}^8 2^k + \sum_{k=2}^8 (-3)^k\)</span></p></li>
+</ol>
+<p>Untuk <span class="math notranslate nohighlight">\(\sum_{k=1}^8 2^k\)</span>, kita memiliki deret geometrik dengan rasio <span class="math notranslate nohighlight">\(r = 2\)</span>, suku pertama <span class="math notranslate nohighlight">\(a = 2\)</span>, dan jumlah <span class="math notranslate nohighlight">\(n = 8\)</span>:</p>
+<p><span class="math notranslate nohighlight">\(\sum_{k=1}^8 2^k = 2 + 2^2 + 2^3 + \dots + 2^8 = 2 \cdot \frac{2^8 - 1}{2 - 1} = 2(255) = 510\)</span></p>
+<p>Untuk <span class="math notranslate nohighlight">\(\sum_{k=2}^8 (-3)^k\)</span>, ini juga merupakan deret geometrik dengan <span class="math notranslate nohighlight">\(r = -3\)</span>, suku pertama <span class="math notranslate nohighlight">\(a = (-3)^2 = 9\)</span>, dan jumlah <span class="math notranslate nohighlight">\(n = 7\)</span>:</p>
+<p><span class="math notranslate nohighlight">\(\sum_{k=2}^8 (-3)^k = (-3)^2 + (-3)^3 + \dots + (-3)^8 = \frac{9(1 - (-3)^7)}{1 - (-3)}\)</span></p>
+<p><span class="math notranslate nohighlight">\(= \frac{9(1 + 2187)}{4} = \frac{9 \cdot 2188}{4} = 4923 ]\)</span></p>
+<p>Sehingga jumlah totalnya:</p>
+<p><span class="math notranslate nohighlight">\(\sum_{k=1}^8 2^k + \sum_{k=2}^8 (-3)^k = 510 + 4923 = 5433\)</span></p>
+<hr class="docutils" />
+<ol class="arabic simple" start="2">
+<li><p>Tentukan nilai <span class="math notranslate nohighlight">\(\sum_{i=0}^2 \sum_{j=0}^3 (2i + 3j)\)</span></p></li>
+</ol>
+<p>Kita akan menghitung:</p>
+<p><span class="math notranslate nohighlight">\(\sum_{i=0}^2 \sum_{j=0}^3 (2i + 3j) = \sum_{i=0}^2 \left( \sum_{j=0}^3 2i + \sum_{j=0}^3 3j \right)\)</span></p>
+<p>Untuk <span class="math notranslate nohighlight">\(\sum_{j=0}^3 2i\)</span>, karena <span class="math notranslate nohighlight">\(2i\)</span> konstan terhadap <span class="math notranslate nohighlight">\(j\)</span>, hasilnya:</p>
+<p><span class="math notranslate nohighlight">\(\sum_{j=0}^3 2i = 4(2i) = 8i\)</span></p>
+<p>Untuk <span class="math notranslate nohighlight">\(\sum_{j=0}^3 3j\)</span>, ini adalah jumlah deret aritmatika:</p>
+<p><span class="math notranslate nohighlight">\(\sum_{j=0}^3 3j = 3(0 + 1 + 2 + 3) = 3 \cdot 6 = 18\)</span></p>
+<p>Sehingga:</p>
+<p><span class="math notranslate nohighlight">\(\sum_{i=0}^2 \sum_{j=0}^3 (2i + 3j) = \sum_{i=0}^2 (8i + 18) = \sum_{i=0}^2 8i + \sum_{i=0}^2 18\)</span></p>
+<p><span class="math notranslate nohighlight">\(\sum_{i=0}^2 8i = 8(0 + 1 + 2) = 8 \cdot 3 = 24\)</span></p>
+<p><span class="math notranslate nohighlight">\(\sum_{i=0}^2 18 = 3 \cdot 18 = 54 ]\)</span></p>
+<p>Sehingga totalnya:</p>
+<p><span class="math notranslate nohighlight">\(\sum_{i=0}^2 \sum_{j=0}^3 (2i + 3j) = 24 + 54 = 78\)</span></p>
+<hr class="docutils" />
+<ol class="arabic simple" start="3">
+<li><p>Tentukan nilai <span class="math notranslate nohighlight">\(\sum_{i=0}^3 \sum_{j=0}^2 i\)</span></p></li>
+</ol>
+<p>Karena <span class="math notranslate nohighlight">\(i\)</span> tidak bergantung pada <span class="math notranslate nohighlight">\(j\)</span>, maka:</p>
+<p><span class="math notranslate nohighlight">\(\sum_{i=0}^3 \sum_{j=0}^2 i =\sum_{i=0}^3 \left( \sum_{j=0}^2 i\right) = \sum_{i=0}^3 \left(3i\right)\)</span></p>
+<p>\sum_{i=0}^3 3i = 3 \cdot \sum_{i=0}^3 i = 3(0 + 1 + 2 + 3) = 3 \cdot 6 = 18</p>
+<hr class="docutils" />
+<p>Jawaban akhir:</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(\sum_{k=1}^8 2^k + \sum_{k=2}^8 (7-3)^k = 5433\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\sum_{i=0}^2 \sum_{j=0}^3 (2i + 3j) = 78\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\sum_{i=0}^3 \sum_{j=0}^2 i = 18\)</span></p></li>
+</ol>
 </section>
+<section id="rekursi">
+<h2>Rekursi<a class="headerlink" href="#rekursi" title="Link to this heading">#</a></h2>
+<p>-Sebuah objek dikatakan rekursif (recursive) jika ia didefinisikan dalam terminologi dirinya sendiri.</p>
+<p>-Proses mendefinisikan objek dalam terminologi dirinya sendiri disebut rekursi (recursion).</p>
+<p>-Perhatikan tiga buah gambar pada tiga slide berikut ini.</p>
+<hr class="docutils" />
+<p>Objek fraktal adalah contoh rekursif.</p>
+<p><img alt="1000122502" src="https://hackmd.io/_uploads/HkhHupg7ke.jpg" /></p>
+</section>
+<section id="fungsi-rekursif">
+<h2>Fungsi Rekursif<a class="headerlink" href="#fungsi-rekursif" title="Link to this heading">#</a></h2>
+<p>Fungsi rekursif didefinisikan oleh dua bagian:
+(i) Basis</p>
+<ol class="arabic simple">
+<li><p>Bagian yang berisi nilai fungsi yang terdefinisi secara eksplisit. 2. Bagian ini juga sekaligus menghentikan rekursif (dan memberikan sebuah nilai yang terdefinisi pada fungsi rekursif). (ii) Rekurens</p></li>
+<li><p>Bagian ini mendefinisikan fungsi dalam terminologi dirinya sendiri 2. Berisi kaidah untuk menemukan nilai fungsi pada suatu input dari nilai-nilai lainnya pada input yang lebih kecil.</p></li>
+</ol>
+<hr class="docutils" />
+<p>Contoh 6: Misalkan f didefinsikan secara rekusif sbb</p>
+<p><span class="math notranslate nohighlight">\(f(n) =
+\begin{cases} 
+3, &amp; \text{jika } n = 0 \\ 
+2f(n-1) + 4, &amp; \text{jika } n &gt; 0
+\end{cases}\)</span></p>
+<p>Tentukan nilai <span class="math notranslate nohighlight">\(f\)</span>(4)!</p>
+<p>Solusi:<br />
+f(4) = 2f(3) + 4
+=  2(2f(2) + 4) + 4
+=  2(2(2f(1) + 4) + 4) + 4
+=  2(2(2(2f(0) + 4) + 4) + 4) + 4
+=  2(2(2(2.3 + 4) + 4) + 4) + 4	
+=  2(2(2(10) + 4) + 4) + 4
+=  2(2(24) + 4) + 4
+=  2(52) + 4
+= 108</p>
+<p>Cara lain menghitungnya:
+f(0) = 3
+f(1) = 2f(0) + 4 = 2 . 3 + 4 = 10
+f(2) = 2f(1) + 4 = 2 . 10 + 4 = 24
+f(3) = 2f(2) + 4 = 2 . 24 + 4 = 52
+f(4) = 2f(3) + 4 = 2 . 52 + 4 = 108</p>
+<p>Jadi, f(4) = 108.</p>
+<hr class="docutils" />
+<p>Contoh 7: Nyatakan n! dalam definisi rekursif</p>
+<p>Solusi: <span class="math notranslate nohighlight">\(n! = 1 \times 2 \times 3 \times \ldots \times (n-1) \times n = (n-1)! \times n\)</span></p>
+<p>Misalkan f(n) = n!, maka<br />
+<span class="math notranslate nohighlight">\(n! =
+\begin{cases} 
+1, &amp; \text{jika } n = 0 \\ 
+n \cdot (n-1)!, &amp; \text{jika } n &gt; 0
+\end{cases}\)</span></p>
+<p>Menghitung 5! secara rekursif adalah:
+5! = 5 . 4! = 5 . 4 . 3! = 5 . 4 . 3 . 2! = 5 . 4 . 3 . 2 . 1! = 5 . 4 . 3 . 2 . 1 . 0!	=  5 . 4 . 3 . 2 . 1 . 1 = 120</p>
+<hr class="docutils" />
+<p>Algoritma menghitung faktorial:</p>
+<p>function Faktorial (input  n :integer)integer
+{ mengembalikan nilai n!;
+basis   : jika n = 0, maka 0! = 1
+rekurens: jika n &gt; 0, maka n! = n  (n-1)!
+}
+DEKLARASI
+-
+ALGORITMA:
+if n = 0 then
+return 1		              { basis }
+else
+return  n * Faktorial(n – 1)	{ rekurens }
+end</p>
+<hr class="docutils" />
+<p>Contoh 8: Barisan Fibonacci  0, 1, 1, 2, 3, 5, 8, 11, 19, …. Dapat dinyatakan secara rekursif sebagai berikut:</p>
+<p><span class="math notranslate nohighlight">\(t_n = \begin{cases} 
+0 &amp; \text{jika } n = 0 \\
+1 &amp; \text{jika } n = 1 \\
+t_{n-1} + t_{n-2} &amp; \text{jika } n &gt; 1 
+\end{cases}\)</span></p>
+<hr class="docutils" />
+<p>Contoh 9: Fungsi (polinom) Chebyshev dinyatakan sebagai</p>
+<p><span class="math notranslate nohighlight">\(I(n, x) = 
+\begin{cases} 
+1 &amp; \text{jika } n = 0 \\
+x &amp; \text{jika } n = 1 \\
+2x \cdot I(n-1, x) - I(n-2, x) &amp; \text{jika } n &gt; 1 
+\end{cases}\)</span></p>
+<p>Contoh 10: Sumasi<span class="math notranslate nohighlight">\(\sum_{k=0}^{n} a_k\)</span> didefinisikan secara rekursif sebagai  berikut:</p>
+<p><span class="math notranslate nohighlight">\(\sum_{k=0}^{n} a_k = a_0 + a_1 + a_2 + \ldots + a_{n-1} + a_n\)</span></p>
+<p><span class="math notranslate nohighlight">\(= (a_0 + a_1 + a_2 + \ldots + a_{n-1}) + a_n\)</span></p>
+<p><span class="math notranslate nohighlight">\(= \left( \sum_{k=0}^{n-1} a_k \right) + a_n\)</span></p>
+<p>Sehingga <span class="math notranslate nohighlight">\(\sum_{k=0}^{n} a_k = 
+\begin{cases} 
+a_0, &amp; \text{jika } n = 0 \\
+\left( \sum_{k=0}^{n-1} a_k \right) + a_n, &amp; \text{jika } n &gt; 0
+\end{cases}\)</span></p>
+<hr class="docutils" />
+<p>Latihan</p>
+<ol class="arabic simple">
+<li><p>Definisikan an secara rekursif , yang dalam hal ini a adalah  sebilangan riil tidak-nol dan n adalah bilangan bulat tidak-negatif.</p></li>
+<li><p>Nyatakan a . b secara rekursif, yang dalam hal ini a dan b adalah bilangan bulat positif.</p></li>
+</ol>
+<p>Solusi:</p>
+<p><span class="math notranslate nohighlight">\(a^n = a \cdot a \cdot a \cdot \ldots \cdot a \quad \text{(n kali)}\)</span></p>
+<p><span class="math notranslate nohighlight">\(a^{n-1} = a \cdot a \cdot a \cdot \ldots \cdot a \quad \text{(n-1 kali)}\)</span></p>
+<p>Sehingga <span class="math notranslate nohighlight">\(a^n = 
+\begin{cases} 
+1, &amp; \text{jika } n = 0 \\
+a \cdot a^{n-1}, &amp; \text{jika } n &gt; 0 
+\end{cases}\)</span></p>
+<ol class="arabic simple" start="2">
+<li><p><span class="math notranslate nohighlight">\(\begin{align*}
+a \cdot b &amp;= b + b + \ldots + b \quad \text{(a kali)} \\
+&amp;= b + b + \ldots + b \\
+&amp;= b + (a - 1)b \\ &amp;\Rightarrow a \cdot b = \begin{cases} b &amp; , \text{jika } a = 1\\b + (a - 1)b &amp; , \text{jika } a &gt; 1\end{cases}\end{align*}\)</span></p></li>
+</ol>
+</section>
+<section id="struktur-rekursif">
+<h2>Struktur Rekursif<a class="headerlink" href="#struktur-rekursif" title="Link to this heading">#</a></h2>
+<p>Struktur data yang penting dalam komputer adalah pohon biner (binary tree).</p>
+<p><img alt="1000122546" src="https://hackmd.io/_uploads/rybwfReX1e.jpg" /></p>
+<ul class="simple">
+<li><p>Simpul (node) pada pohon biner mempunyai paling banyak dua buah anak.</p></li>
+<li><p>Jumlah anak pada setiap simpul bisa 1, 2, atau 0.</p></li>
+<li><p>Simpul yang mempunyai anak disebut simpul cabang (branch node) atau simpul dalam (internal node)</p></li>
+<li><p>Simpul yang tidak mempunyai anak disebut simpul daun (leave).</p></li>
+</ul>
+<hr class="docutils" />
+<p>Pohon biner adalah struktur yang rekursif, sebab setiap simpul mempunyai cabang yang juga berupa pohon. Setiap cabang disebut  upapohon (subtree).</p>
+<p><img alt="1000122554" src="https://hackmd.io/_uploads/rJY0f0lmkl.jpg" /></p>
+<hr class="docutils" />
+<p>Oleh karena itu, pohon dapat didefinisikan secara rekursif sebagari berikut:</p>
+<p>(i) Basis: kosong adalah pohon biner
+(ii) Rekurens: Jika T1 dan T2 adalah pohon biner, maka adalah pohon biner</p>
+<hr class="docutils" />
+<p>Proses pembuatan pohon biner secara rekursif</p>
+<p><img alt="1000122558" src="https://hackmd.io/_uploads/r1zoE0em1e.jpg" /></p>
 </section>
 </section>
 
@@ -498,16 +794,12 @@ end for
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deretan-sequence">Deretan (Sequence)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definisi">Definisi</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penjumlahan-deretan">Penjumlahan Deretan</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deret-geometri">Deret Geometri</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deret-aritmetika">Deret Aritmetika</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sumasi-ganda">Sumasi Ganda</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deretan-sequence">Deretan (sequence)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penjumlahan-deretan">Penjumlahan Deretan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sumasi-ganda">Sumasi ganda</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rekursi">Rekursi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fungsi-rekursif">Fungsi Rekursif</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#struktur-rekursif">Struktur Rekursif</a></li>
 </ul>
   </nav></div>
 
